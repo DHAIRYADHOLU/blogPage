@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: auto;   /* Allow vertical scrolling */
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: auto; /* Ensure the App takes at least the full viewport height */
+  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+}
+
+.navbar { 
+  width: 100%;
+  padding: 20px;
+  background-color: #333;
+  display: flex;
+  justify-content: space-between; /* Space between logo and nav links */
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  width: 80%;
+  max-width: 1200px;
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  overflow-x: auto; /* Allow horizontal scrolling for the content */
+  box-sizing: border-box;
+}
+
+.blog-post {
+  min-width: 300px; /* Set a minimum width for each blog post */
+  display: flex;
+  flex-direction: column; /* Stack image and text vertically inside the blog post */
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+}
+
+.blog-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.blog-text {
+  flex: 1;
+}
+
+.blog-meta {
+  font-style: italic;
+  color: #555;
+}
+
+@media (max-width: 600px) {
+  .content {
+    width: 100%;
+    padding: 0 10px;
+    flex-direction: column;
+  }
+
+  .blog-post {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links {
+    gap: 10px;
+    font-size: 16px;
+  }
+}
